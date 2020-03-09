@@ -48,4 +48,4 @@ const List = ({ data: { page }, location }) => {
   )
 }
 
-export default List
+export default React.memo(List)

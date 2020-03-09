@@ -1,7 +1,7 @@
 {
   "name": "@dexgroup/gatsby-theme-dexlist-design",
   "description": "DEX List's Gatsby theme: Design",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "main": "index.js",
   "author": "Ding Yi <d@ding.one> (https://ding.one/)",
   "license": "MIT",

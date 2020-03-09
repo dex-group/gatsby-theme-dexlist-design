@@ -13,16 +13,16 @@ import Slogan from './slogan'
 import Price from './tagsPrice'
 import Viewall from './viewall'
 
-function shuffle(array) {
-  let i = array.length - 1;
-  for (; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-  }
-  return array
-}
+// function shuffle(array) {
+//   let i = array.length - 1;
+//   for (; i > 0; i--) {
+//     const j = Math.floor(Math.random() * (i + 1));
+//     const temp = array[i];
+//     array[i] = array[j];
+//     array[j] = temp;
+//   }
+//   return array
+// }
 
 const Index = ({ data: { allListYaml }, location }) => {
   const cards = allListYaml.edges
@@ -31,12 +31,12 @@ const Index = ({ data: { allListYaml }, location }) => {
       <SEO title='' keywords={[`bookmarks`, `design`, `all-in-one`]} />
       {cards.map(({ node }) => {
         const items = node.item
-        const shuffledItems = shuffle(items)
+        //const shuffledItems = shuffle(items)
         const url = `resources/${node.id}`
         return (
           <Section key={node.id}>
             <Topic>{node.title}</Topic>
-            {shuffledItems.slice(0, 24).map(item => {
+            {items.slice(0, 24).map(item => {
               return (
               <Card
                 key={item.link}
@@ -70,4 +70,4 @@ const Index = ({ data: { allListYaml }, location }) => {
   )
 }
 
-export default Index
+export default React.memo(Index)
