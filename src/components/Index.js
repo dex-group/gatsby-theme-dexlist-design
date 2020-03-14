@@ -36,7 +36,7 @@ const Index = ({ data: { allListYaml }, location }) => {
         return (
           <Section key={node.id}>
             <Topic>{node.title}</Topic>
-            {items.slice(0, 24).map(item => {
+            {items.slice(0, 12).map(item => {
               return (
               <Card
                 key={item.link}

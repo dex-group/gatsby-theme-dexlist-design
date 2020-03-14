@@ -34,6 +34,21 @@ export default {
       textOverflow: 'ellipsis',
       overflow: 'hidden',
       whiteSpace: 'nowrap'
+    },
+    about: {
+      fontWeight: 'heading',
+      fontSize: 11,
+      lineHeight: '1.5',
+      opacity: 0.5
+    }
+  },
+
+  images: {
+    avatar: {
+      display: 'inline-block',
+      width: 24,
+      height: 24,
+      mr: 2,
     }
   },
 
@@ -75,7 +90,6 @@ export default {
       position: 'relative',
       zIndex: 2,
       display: 'inline-block',
-      minWidth: '184px',
       borderRadius: 6,
       backgroundColor: '#fff',
       boxShadow: '0 8px 12px 0 rgba(0, 0, 0, .2)'
@@ -109,6 +123,15 @@ export default {
       ':hover .count': {
         visibility: 'visible',
       }
+    },
+    about: {
+      py: 2,
+      px: 2,
+      mb: 2,
+      color: '#fff',
+      borderRadius: 4,
+      display: 'flex',
+      alignItems: 'center'
     },
     submit: {
       color: '#fff',
@@ -151,7 +174,13 @@ export default {
       }
     },
     p: {
-      fontSize: 14,
+      fontSize: 3,
+    },
+    span: {
+      fontWeight: 'heading',
+      fontSize: 11,
+      lineHeight: '1.5',
+      opacity: 0.5
     },
     h1: {
       fontFamily: 'heading',
@@ -172,11 +201,15 @@ export default {
       fontFamily: 'body',
       fontWeight: 'bold',
       fontSize: 3,
-      color: 'text',
       py: '2px',
       m: 0,
-      lineHeight: '1',
+      lineHeight: 1,
       letterSpacing: '-0.4px'
+    },
+    hr: {
+      my: 3,
+      height: '2px',
+      color: '#eaeaea'
     },
     header: {
       py: 2,
@@ -189,7 +222,12 @@ export default {
       alignItems: 'center',
       backgroundColor: '#ffffff00',
       justifyContent: 'space-between',
-      backdropFilter: 'blur(4px)'
+      backdropFilter: 'blur(4px)',
+      p: {
+        m: 0,
+        fontSize: 1,
+        fontWeight: 'body'
+      }
     },
     footer: {
       margin: '0 auto',
@@ -223,9 +261,7 @@ export default {
     overlay: {
       position: 'absolute',
       bottom: 0,
-      left: 0,
       top: '56px',
-      right: 0,
       width: '100%',
       height: '100%'
     },

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { useStaticQuery, graphql } from "gatsby"
-import { jsx, Box, Card, Link } from 'theme-ui'
+import { jsx, Box, Card, Link, Image } from 'theme-ui'
 
 export default () => {
   const data = useStaticQuery(navQuery)
@@ -13,21 +13,21 @@ export default () => {
   } = data
 
   return (
-    <Card variant='menu'>
+    <Card
+      variant='menu'
+      sx={{
+        minWidth: 184
+      }}
+    >
       {navLinks.map(nav => (
         <Link
           href={nav.to}
           variant='nav'
         >
-          <img
+          <Image
+            variant='avatar'
             src={nav.icon}
             alt={nav.name}
-            sx={{
-              display: 'inline-block',
-              width: '24px',
-              height: '24px',
-              mr: 2,
-            }}
           />
           <Box>
             {nav.name}

@@ -1,14 +1,13 @@
 /** @jsx jsx */
+import React from 'react'
 import { useRef, useState } from "react"
 import useOnClickOutside from "use-onclickoutside"
 import { motion } from "framer-motion"
 import { jsx, Box } from 'theme-ui'
-import Logo from './logo'
-import About from './about'
-import Menu from './menu'
+import AboutMenu from './aboutMenu'
+import Submit from './submit'
 
-
-const menu = {
+const about = {
   open: {
     opacity: 1,
     visibility: "visible",
@@ -34,7 +33,7 @@ const menu = {
   }
 }
 
-const Header = ({ children }) => {
+export default () => {
 
   const [isOpen, setIsOpen] = useState(false)
   const ref = useRef()
@@ -44,43 +43,37 @@ const Header = ({ children }) => {
   })
 
   return (
-    <header
-      sx={{
-        variant: 'styles.header',
-      }}
-    >
+    <>
       {setIsOpen && (
         <motion.div
           ref={ref}
           initial={false}
           animate={isOpen ? "open" : "closed"}
           sx={{
-            variant: 'styles.breadcrumb',
             position: 'relative'
           }}
         >
-          <Logo toggle={() => setIsOpen(!isOpen)} />
+          <Box
+            onClick={() => setIsOpen(!isOpen)}
+            sx={{
+              mr: 3,
+              fontSize: 3,
+              cursor: 'pointer',
+              display: 'inline-block'
+            }}
+          >About</Box>
           <motion.div
-            variants={menu}
+            variants={about}
             sx={{
               variant: 'styles.overlay',
-              left: 0
+              right: 76
             }}
           >
-            <Menu />
+            <AboutMenu />
           </motion.div>
-          <Box
-            sx={{
-              variant: 'styles.breadcrumb',
-            }}
-          >
-            {children}
-          </Box>
+          <Submit />
         </motion.div>
       )}
-      <About />
-    </header>
+    </>
   )
 }
-
-export default Header
