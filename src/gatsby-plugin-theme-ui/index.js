@@ -5,7 +5,7 @@ export default {
 
   fonts: {
     body: `'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif`,
-    heading: '"DM Serif Display", sans-serif',
+    heading: `'Inter', sans-serif`,
     monospace: `Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace`
   },
   fontSizes: [14, 14, 14, 14, 16],

@@ -11,7 +11,7 @@ function IndexPage({ location, data }) {
   )
 }
 
-export default React.memo(IndexPage)
+export default IndexPage
 
 export const query = graphql`
   query IndexPage {
@@ -30,7 +30,7 @@ export const query = graphql`
                 fixed(
                   width: 32 height: 32
                 ) {
-                  ...GatsbyImageSharpFixed_tracedSVG
+                  ...GatsbyImageSharpFixed_withWebp_tracedSVG
                 }
               }
             }

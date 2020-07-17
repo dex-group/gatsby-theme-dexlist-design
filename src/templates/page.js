@@ -11,7 +11,7 @@ function PageTemplate({ location, data }) {
   )
 }
 
-export default React.memo(PageTemplate)
+export default PageTemplate
 
 export const query = graphql`
   query($id: String!) {
@@ -29,7 +29,7 @@ export const query = graphql`
               width: 32
               height: 32
             ) {
-              ...GatsbyImageSharpFixed_tracedSVG
+              ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }
         }
