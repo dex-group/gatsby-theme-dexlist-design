@@ -1,11 +1,15 @@
 {
   "name": "@dexgroup/gatsby-theme-dexlist-design",
   "description": "DEX List's Gatsby theme: Design",
-  "version": "2.0.21",
+  "version": "2.0.22",
   "main": "index.js",
   "author": "Ding Yi <d@ding.one> (https://ding.one/)",
   "license": "MIT",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dex-group/gatsby-theme-dexlist-design"
+  },
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "@mdx-js/mdx": "^1.6.16",
